@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
-	private RectTransform rTransform;
-
 	#region IDragHandler implementation
 	void IDragHandler.OnDrag (PointerEventData eventData)
 	{
@@ -40,7 +38,6 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
 	// Use this for initialization
 	void Start () {
-		rTransform = gameObject.GetComponent<RectTransform> ();
 	}
 	
 	// Update is called once per frame
