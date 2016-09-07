@@ -13,7 +13,7 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 		
 		//Vector2 pos;// = eventData.position;
 		//RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.FindGameObjectWithTag("Canvas").transform as RectTransform, Input.mousePosition, GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>().worldCamera, out pos);
-		rTransform.anchoredPosition = Input.mousePosition;
+		transform.position = Input.mousePosition;
 	}
 	#endregion
 
