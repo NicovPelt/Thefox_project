@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
+	public Sprite CultureIcon;
+	public Sprite BuildingIcon;
+	public Sprite MilitaryIcon;
+	public Sprite ScienceIcon;
+
 	#region IDragHandler implementation
 	void IDragHandler.OnDrag (PointerEventData eventData)
 	{
@@ -35,6 +40,24 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 	}
 
 	#endregion
+
+	public void iconChange(Bar.BarName newIcon){
+		Image temp = GetComponent<Image> ();
+		switch (newIcon) {
+		case Bar.BarName.Building:
+			temp.sprite = BuildingIcon;
+			break;
+		case Bar.BarName.Culture:
+			temp.sprite = CultureIcon;
+			break;
+		case Bar.BarName.Military:
+			temp.sprite = MilitaryIcon;
+			break;
+		case Bar.BarName.Science:
+			temp.sprite = ScienceIcon;
+			break;
+		}
+	}
 
 	// Use this for initialization
 	void Start () {

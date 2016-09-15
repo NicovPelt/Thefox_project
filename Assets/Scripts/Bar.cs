@@ -4,11 +4,21 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Bar : MonoBehaviour, IDropHandler {
-	
+
+	public enum BarName {
+		Culture,
+		Military,
+		Building,
+		Science
+	}
+
+	public BarName BName;
+
 	#region IDropHandler implementation
 	void IDropHandler.OnDrop (PointerEventData eventData)
 	{
 		eventData.pointerDrag.transform.SetParent (transform);
+		eventData.pointerDrag.GetComponent<Block> ().iconChange (BName);
 		arrangeBlocks ();
 	}
 	#endregion

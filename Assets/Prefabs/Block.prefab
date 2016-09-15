@@ -67,6 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed75e169f11a354c84c17f8da43575e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CultureIcon: {fileID: 21300000, guid: d0e0b6acf51e49c43aa1f77091589208, type: 3}
+  BuildingIcon: {fileID: 21300000, guid: 80369737cd99641489a31b746c1b64b2, type: 3}
+  MilitaryIcon: {fileID: 21300000, guid: dee911b5f7f32004f907690496453c3d, type: 3}
+  ScienceIcon: {fileID: 21300000, guid: 156f76deef1f7384bbbd16993257415d, type: 3}
 --- !u!222 &222000010629758392
 CanvasRenderer:
   m_ObjectHideFlags: 1
